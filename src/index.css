@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #eeeded;
+  font-family: 'Nunito', Ubuntu, sans-serif;
+  height: 100vh;
+}
+
+.App {
+  max-width: 100wh;
+  margin: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+  padding: 1rem 0;
+  letter-spacing: 1rem;
+}
+
+.title > span {
+  color: #0275d8;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+
+main > h2 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  color: rgb(99, 98, 98);
+}
+
+.add_book_form {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-group input[type='text'],
+.form-group input[type='number'] {
+  width: 100%;
+  padding: 1rem 1rem;
+  outline: 0;
+  border: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.save_btn {
+  cursor: pointer;
+  background-color: #0275d8;
+  padding: 0.6rem 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border: 0;
+  outline: 0;
+  transition: all 0.5s ease;
+  margin: 0.7rem 0;
+}
+
+.save_btn:hover {
+  background-color: #0c8cfc;
+}
+
+.remove {
+  cursor: pointer;
+  background-color: red;
+  border: 0;
+  outline: 0;
+  padding: 0.2rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  transition: all 0.5s ease;
+}
+
+.remove:hover {
+  background-color: rgb(255, 91, 91);
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.book__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.book__card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid lightgray;
+  padding: 0.2rem;
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    max-width: 90%;
+  }
+
+  .add_book_form {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .form-group input[type='text'],
+  .form-group input[type='number'] {
+    font-size: 1rem;
+  }
+
+  .save_btn {
+    font-size: 1rem;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    padding: 1rem 0;
+    letter-spacing: 1rem;
+  }
+
+  .book__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .book__card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
